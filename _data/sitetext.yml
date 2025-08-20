@@ -1,7 +1,7 @@
 en:
   header: &id001
-    title: 안정적인 직장은 없다. 안정적인 사람이 그 곳에 있을 뿐 # 메인 슬로건
-    text: 고성빈 | Data Analyst
+    title: Welcome to my Rèsumè # 메인 슬로건
+    text: Data Analyst
     button: See More
     buttonlink: '#portfolio'
   services: &id002
