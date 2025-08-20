@@ -1,0 +1,10 @@
+en:
+  nav:
+    - title: "Home"
+      url: "#page-top"
+    - title: "About"
+      section: "about"
+    - title: "History"
+      section: "timeline"
+    - title: "Portfolio"
+      section: "portfolio"
