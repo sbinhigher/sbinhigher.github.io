@@ -1,38 +1,1829 @@
 en:
-  header:
-    title: "데이터 분석 & ML 포트폴리오"
-    text: "고성빈 | Data Analyst"
-    button: "See More"
-    buttonlink: "#portfolio"
-
-  about:
-    title: "About"
-    text: "데이터 분석/머신러닝 프로젝트를 정리한 포트폴리오입니다."
-    section: "about"
-
-  timeline:
-    title: "History"
-    text: "간단한 경력 타임라인"
-    section: "timeline"
-    events:
-      - title: "Data Analyst"
-        year: "2023-2025"
-        desc: "풍력 결함 탐지, 도로 혼잡 예측, 관광 데이터 분석 수행"
-      - title: "Projects"
-        year: "Selected"
-        desc: "YOLOv7 기반 결함 탐지 / 시계열 고혼잡 분류 / SNA·코호트·퍼널 분석"
-    end: "To be continued"
-
-  portfolio:
-    title: "Portfolio"
-    text: "대표 프로젝트"
-    section: "portfolio"
-    closebutton: "Close"
-    # 간단 카드 예시(이미지는 나중에 추가 가능)
+  header: &id001
+    title: 데이터 분석 & ML 포트폴리오
+    text: 고성빈 | Data Analyst
+    button: See More
+    buttonlink: '#portfolio'
+  services: &id002
+    title: Services
+    text: Lorem ipsum
+    section: services
     list:
-      - title: "풍력 결함 탐지 (YOLOv7)"
-        desc: "약 90% 정확도, 생산성 99.3% 향상"
-        modal: false
-      - title: "도로 혼잡 예측"
-        desc: "이상치 구간 탐지 후 고혼잡 분류"
-        modal: false
+    - title: E-Commerce
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+        quam architecto quo inventore harum ex magni, dicta impedit.
+      icon: fas fa-shopping-cart
+    - title: Responsive Design
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+        quam architecto quo inventore harum ex magni, dicta impedit.
+      icon: fas fa-laptop
+    - title: '[Markdown](https://en.wikipedia.org/wiki/Markdown)'
+      desc: Your description here, full **Markdown** support
+      icon: fab fa-markdown
+  portfolio:
+    title: Portfolio
+    text: 대표 프로젝트
+    section: portfolio
+    closebutton: Close
+    list:
+    - title: 풍력 결함 탐지 (YOLOv7)
+      desc: 약 90% 정확도, 생산성 99.3% 향상
+      modal: false
+    - title: 도로 혼잡 예측
+      desc: 이상치 탐지 후 고혼잡 분류
+      modal: false
+  timeline:
+    title: History
+    text: 간단한 경력 타임라인
+    section: timeline
+    events:
+    - title: Data Analyst
+      year: 2023–2025
+      desc: 풍력 결함 탐지, 도로 혼잡 예측, 관광 데이터 분석 수행
+    end: To be continued
+  about:
+    title: About
+    text: 데이터 분석/머신러닝 프로젝트 포트폴리오입니다.
+    section: about
+  clients: &id003
+    section: clients
+    max-height: 100px
+    horizontal-scrolling: ''
+    list:
+    - title: envato
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/envato.jpg
+    - title: designmodo
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/designmodo.jpg
+    - title: themeforest
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/themeforest.jpg
+    - title: Creative Market
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/creative-market.jpg
+  team: &id004
+    title: OUR AMAZING TEAM
+    text: Lorem ipsum dolor sit amet consectetur.
+    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
+      laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias
+      ut unde. **Markdown** supported.
+    section: team
+    people:
+    - name: Kay Garland
+      role: Lead Designer
+      image: assets/img/team/500x500.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+    - name: Larry Parker
+      role: Lead Marketer
+      image: assets/img/team/2.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+    - name: Diana Perterson
+      role: Lead Developer
+      image: assets/img/team/500x500.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+  contact: &id005
+    title: Contact Us
+    text: Lorem ipsum or call 123456789
+    section: contact
+    name: Name*
+    name-validation: Please enter your name.
+    email: Email*
+    email-validation: Please enter your email address.
+    phone: Phone Number
+    phone-validation: Please enter your phone number.
+    message: Message*
+    message-validation: Please enter a message.
+    subject: Contact Form Submission
+    submit: Send Message
+  footer: &id006
+    legal: Privacy Policy
+    social:
+    - url: https://twitter.com
+      icon: fab fa-twitter
+    - url: https://facebook.com
+      icon: fab fa-facebook-f
+    - url: https://linkedin.com
+      icon: fab fa-linkedin-in
+    - url: https://github.com/raviriley/agency-jekyll-theme
+      icon: fab fa-github
+    - url: https://instagram.com
+      icon: fab fa-instagram
+en-001:
+  header: *id001
+  services: *id002
+  portfolio: &id007
+    title: Portfolio
+    text: Lorem ipsum dolor sit amet consectetur.
+    section: portfolio
+    closebutton: Close Project
+  timeline: &id008
+    title: Timeline
+    text: Lorem ipsum timeline
+    section: timeline
+    events:
+    - title: Our Humble Beginnings
+      year: 2009-2011
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+        unde, sed, incidunt et ea quo dolore laudantium consectetur!
+      image: assets/img/timeline/1.jpg
+      alt: null
+    - title: An Agency is Born
+      year: March 2011
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+        unde, sed, incidunt et ea quo dolore laudantium consectetur!
+      image: assets/img/timeline/2.jpg
+      alt: null
+    - title: Jekyll Theme is created
+      year: '2019'
+      desc: Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme.
+        The Jekyll theme can be installed as a Ruby gem, or remotely. For more information,
+        visit the documentation.
+      image: assets/img/timeline/3.jpg
+      alt: image alt text
+    - title: Title
+      year: 2009-2011
+      desc: Your description here, **Markdown** is fully supported.
+      image: assets/img/timeline/4.jpg
+      alt: null
+      align: right
+    end: Be Part <br> of Our <br> Story!
+  about: &id009
+    title: About Us
+    text: our story
+    body: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam
+      veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+      **Markdown** supported.
+    section: about
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-150:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-AG:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-AI:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-AS:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-AT:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-AU:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-BB:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-BE:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-BI:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-BM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-BS:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-BW:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-BZ:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-CA:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-CC:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-CH:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-CK:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-CM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-CX:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-CY:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-DE:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-DK:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-DM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-ER:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-FI:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-FJ:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-FK:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-FM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-GB:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-GD:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-GG:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-GH:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-GI:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-GM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-GU:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-GY:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-HK:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-IE:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-IL:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-IM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-IN:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-IO:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-JE:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-JM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-KE:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-KI:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-KN:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-KY:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-LC:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-LR:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-LS:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MG:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MH:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MO:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MP:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MS:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MT:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MU:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MW:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-MY:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-NA:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-NF:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-NG:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-NL:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-NR:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-NU:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-NZ:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-PG:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-PH:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-PK:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-PN:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-PR:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-PW:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-RW:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SB:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SC:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SD:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SE:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SG:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SH:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SI:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SL:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SS:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SX:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-SZ:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-TC:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-TK:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-TO:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-TT:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-TV:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-TZ:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-UG:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-UM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-US:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-VC:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-VG:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-VI:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-VU:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-WS:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-ZA:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-ZM:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+en-ZW:
+  header: *id001
+  services: *id002
+  portfolio: *id007
+  timeline: *id008
+  about: *id009
+  clients: *id003
+  team: *id004
+  contact: *id005
+  footer: *id006
+es:
+  header: &id010
+    title: ¡Bienvenido a nuestro Estudio!
+    text: Es un placer conocerle
+    button: Ver más
+    buttonlink: '#servicios'
+  services: &id011
+    title: Servicios
+    text: Lorem ipsum
+    section: servicios
+    list:
+    - title: Comercio Electrónico
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+        quam architecto quo inventore harum ex magni, dicta impedit.
+      icon: fas fa-shopping-cart
+    - title: Diseño Responsivo
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+        quam architecto quo inventore harum ex magni, dicta impedit.
+      icon: fas fa-laptop
+    - title: '[Markdown](https://en.wikipedia.org/wiki/Markdown)'
+      desc: Su descripción aquí, soporte completo de **Markdown**
+      icon: fab fa-markdown
+  portfolio: &id012
+    title: Portafolio
+    text: Lorem ipsum dolor sit amet consectetur.
+    section: portafolio
+    closebutton: Cerrar Proyecto
+  timeline: &id013
+    title: Cronología
+    text: Lorem ipsum timeline
+    section: cronologia
+    events:
+    - title: Nuestro Humilde Comienzo
+      year: 2009-2011
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+        unde, sed, incidunt et ea quo dolore laudantium consectetur!
+      image: assets/img/timeline/1.jpg
+      alt: null
+    - title: Una Agencia nace
+      year: March 2011
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+        unde, sed, incidunt et ea quo dolore laudantium consectetur!
+      image: assets/img/timeline/2.jpg
+      alt: null
+    - title: La plantilla Jekyll es creada
+      year: '2019'
+      desc: Ravi Riley convirtió Agency, una plantilla basada en Bootstrap, en una
+        plantilla de Jekyll. La plantilla Jekyll puede ser instalada commo una gema
+        de Ruby (Ruby gem) o remotamente. Para más información, visite la documentación.
+      image: assets/img/timeline/3.jpg
+      alt: image alt text
+    - title: Título
+      year: 2009-2011
+      desc: Su descripción aquí, **Markdown** es soportado completamente.
+      image: assets/img/timeline/4.jpg
+      alt: null
+      align: right
+    end: ¡Se parte <br> de Nuestra <br> Historia!
+  about: &id014
+    title: Sobre nosotros
+    text: nuestra historia
+    body: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam
+      veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+      **Markdown** supported.
+    section: nosotros
+  clients: &id015
+    section: clientes
+    max-height: 100px
+    horizontal-scrolling: ''
+    list:
+    - title: envato
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/envato.jpg
+    - title: designmodo
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/designmodo.jpg
+    - title: themeforest
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/themeforest.jpg
+    - title: Creative Market
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/creative-market.jpg
+  team: &id016
+    title: NUESTRO INCREÍBLE EQUIPO
+    text: Lorem ipsum dolor sit amet consectetur.
+    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
+      laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias
+      ut unde. **Markdown** supported.
+    section: equipo
+    people:
+    - name: Kay Garland
+      role: Lead Designer
+      image: assets/img/team/500x500.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+    - name: Larry Parker
+      role: Lead Marketer
+      image: assets/img/team/2.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+    - name: Diana Perterson
+      role: Lead Developer
+      image: assets/img/team/500x500.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+  contact: &id017
+    title: Contáctenos
+    text: Lorem ipsum or call 123456789
+    section: contacto
+    name: Nombre*
+    name-validation: Por favor ingrese su nombre.
+    email: Correo Electrónico*
+    email-validation: Por favor ingrese su correo electrónico.
+    phone: Número Telefónico*
+    phone-validation: Por favor ingrese su número telefónico.
+    message: Mensaje*
+    message-validation: Por favor escriba un mensaje.
+    subject: Envío del formulario de contacto
+    submit: Enviar Mensaje
+  footer: &id018
+    legal: Política de Privacidad
+    social:
+    - url: https://twitter.com
+      icon: fab fa-twitter
+    - url: https://facebook.com
+      icon: fab fa-facebook-f
+    - url: https://linkedin.com
+      icon: fab fa-linkedin-in
+    - url: https://github.com/raviriley/agency-jekyll-theme
+      icon: fab fa-github
+    - url: https://instagram.com
+      icon: fab fa-instagram
+es-419:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-AR:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-BO:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-BR:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-BZ:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-CL:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-CO:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-CR:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-CU:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-DO:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-EC:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-ES:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-GQ:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-GT:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-HN:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-MX:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-NI:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-PA:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-PE:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-PH:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-PR:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-PY:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-SV:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-US:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-UY:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+es-VE:
+  header: *id010
+  services: *id011
+  portfolio: *id012
+  timeline: *id013
+  about: *id014
+  clients: *id015
+  team: *id016
+  contact: *id017
+  footer: *id018
+de:
+  header: &id019
+    title: Willkommen auf unserer Webseite!
+    text: Schön das Sie hier sind!
+    button: Mehr erfahren
+    buttonlink: '#Angebote'
+  services: &id020
+    title: Leistungen
+    text: Was wir anbieten.
+    section: Leistungen
+    list:
+    - title: E-Commerce
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+        quam architecto quo inventore harum ex magni, dicta impedit.
+      icon: fas fa-shopping-cart
+    - title: Responsive Design
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+        quam architecto quo inventore harum ex magni, dicta impedit.
+      icon: fas fa-laptop
+    - title: '[Markdown](https://de.wikipedia.org/wiki/Markdown)'
+      desc: Hier können Sie etwas mit **Markdown** einfügen.
+      icon: fab fa-markdown
+  portfolio: &id021
+    title: Portfolio
+    text: Lorem ipsum dolor sit amet consectetur.
+    section: Portfolio
+    closebutton: Schließen
+  timeline: &id022
+    title: Geschichte
+    text: Lorem ipsum timeline
+    section: Geschichte
+    events:
+    - title: Unsere Anfänge
+      year: 2009-2011
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+        unde, sed, incidunt et ea quo dolore laudantium consectetur!
+      image: assets/img/timeline/1.jpg
+      alt: null
+    - title: Gründung der Firma
+      year: März 2011
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+        eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+        unde, sed, incidunt et ea quo dolore laudantium consectetur!
+      image: assets/img/timeline/2.jpg
+      alt: null
+    - title: Das Jekyll-Thema wurde erstellt
+      year: '2019'
+      desc: Ravi Riley wandelte Agency, ein auf Bootstrap basierendes Thema, in ein
+        Jekyll-Thema um. Man kann das Jekyll-Thema als Ruby-Gem oder remotely installieren.
+        Für mehr Informationen, schauen Sie sich die Dokumentation an.
+      image: assets/img/timeline/3.jpg
+      alt: Bildbeschreibung
+    - title: Titel
+      year: 2009-2011
+      desc: Hier können Sie etwas mit **Markdown** einfügen.
+      image: assets/img/timeline/4.jpg
+      alt: null
+      align: right
+    end: Seien Sie <br> Teil unserer <br> Geschichte!
+  about: &id023
+    title: Über uns
+    text: Unsere Geschichte.
+    body: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam
+      veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+      **Markdown** supported.
+    section: Ueber
+  clients: &id024
+    section: Kunden
+    max-height: 100px
+    horizontal-scrolling: ''
+    list:
+    - title: envato
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/envato.jpg
+    - title: designmodo
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/designmodo.jpg
+    - title: themeforest
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/themeforest.jpg
+    - title: Creative Market
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/creative-market.jpg
+  team: &id025
+    title: Unser großartiges Team
+    text: Lorem ipsum dolor sit amet consectetur.
+    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
+      laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias
+      ut unde. **Markdown** supported.
+    section: Team
+    people:
+    - name: Kay Garland
+      role: Chef-Designer
+      image: assets/img/team/500x500.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+    - name: Larry Parker
+      role: Chef der Werbeabteilung
+      image: assets/img/team/2.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+    - name: Diana Perterson
+      role: Chef-Programmiererin
+      image: assets/img/team/500x500.jpg
+      social:
+      - url: https://twitter.com
+        icon: fab fa-twitter
+      - url: https://facebook.com
+        icon: fab fa-facebook-f
+      - url: https://linkedin.com
+        icon: fab fa-linkedin-in
+  contact: &id026
+    title: Kontakt
+    text: Kontaktieren Sie uns.
+    section: Kontakt
+    name: Name*
+    name-validation: Geben Sie einen Namen ein.
+    email: E-Mail*
+    email-validation: Geben Sie Ihre E-Mail-Addresse ein.
+    phone: Telefonnummer*
+    phone-validation: Geben Sie Ihre Telefonnummer ein.
+    message: Nachricht*
+    message-validation: Schreiben Sie etwas...
+    subject: Kontakt-Formular Bestätigung
+    submit: Nachricht absenden
+  footer: &id027
+    legal: Datenschutzerklärung
+    social:
+    - url: https://twitter.com
+      icon: fab fa-twitter
+    - url: https://facebook.com
+      icon: fab fa-facebook-f
+    - url: https://linkedin.com
+      icon: fab fa-linkedin-in
+    - url: https://github.com/raviriley/agency-jekyll-theme
+      icon: fab fa-github
+    - url: https://instagram.com
+      icon: fab fa-instagram
+de-AT:
+  header: *id019
+  services: *id020
+  portfolio: *id021
+  timeline: *id022
+  about: *id023
+  clients: *id024
+  team: *id025
+  contact: *id026
+  footer: *id027
+de-BE:
+  header: *id019
+  services: *id020
+  portfolio: *id021
+  timeline: *id022
+  about: *id023
+  clients: *id024
+  team: *id025
+  contact: *id026
+  footer: *id027
+de-CH:
+  header: *id019
+  services: *id020
+  portfolio: *id021
+  timeline: *id022
+  about: *id023
+  clients: *id024
+  team: *id025
+  contact: *id026
+  footer: *id027
+de-DE:
+  header: *id019
+  services: *id020
+  portfolio: *id021
+  timeline: *id022
+  about: *id023
+  clients: *id024
+  team: *id025
+  contact: *id026
+  footer: *id027
+de-IT:
+  header: *id019
+  services: *id020
+  portfolio: *id021
+  timeline: *id022
+  about: *id023
+  clients: *id024
+  team: *id025
+  contact: *id026
+  footer: *id027
+de-LI:
+  header: *id019
+  services: *id020
+  portfolio: *id021
+  timeline: *id022
+  about: *id023
+  clients: *id024
+  team: *id025
+  contact: *id026
+  footer: *id027
+de-LU:
+  header: *id019
+  services: *id020
+  portfolio: *id021
+  timeline: *id022
+  about: *id023
+  clients: *id024
+  team: *id025
+  contact: *id026
+  footer: *id027

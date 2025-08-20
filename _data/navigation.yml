@@ -1,10 +1,328 @@
 en:
   nav:
-    - title: "Home"
-      url: "#page-top"
-    - title: "About"
-      section: "about"
-    - title: "History"
-      section: "timeline"
-    - title: "Portfolio"
-      section: "portfolio"
+  - title: Home
+    url: '#page-top'
+  - title: About
+    section: about
+  - title: History
+    section: timeline
+  - title: Portfolio
+    section: portfolio
+en-001:
+  nav: &id001
+  - title: Services
+    section: services
+  - title: Portfolio
+    section: portfolio
+  - title: About
+    section: about
+  - title: Timeline
+    section: timeline
+  - title: Team
+    section: team
+  - title: Contact
+    section: contact
+  - title: Theme Source
+    url: https://github.com/raviriley/agency-jekyll-theme/
+en-150:
+  nav: *id001
+en-AG:
+  nav: *id001
+en-AI:
+  nav: *id001
+en-AS:
+  nav: *id001
+en-AT:
+  nav: *id001
+en-AU:
+  nav: *id001
+en-BB:
+  nav: *id001
+en-BE:
+  nav: *id001
+en-BI:
+  nav: *id001
+en-BM:
+  nav: *id001
+en-BS:
+  nav: *id001
+en-BW:
+  nav: *id001
+en-BZ:
+  nav: *id001
+en-CA:
+  nav: *id001
+en-CC:
+  nav: *id001
+en-CH:
+  nav: *id001
+en-CK:
+  nav: *id001
+en-CM:
+  nav: *id001
+en-CX:
+  nav: *id001
+en-CY:
+  nav: *id001
+en-DE:
+  nav: *id001
+en-DK:
+  nav: *id001
+en-DM:
+  nav: *id001
+en-ER:
+  nav: *id001
+en-FI:
+  nav: *id001
+en-FJ:
+  nav: *id001
+en-FK:
+  nav: *id001
+en-FM:
+  nav: *id001
+en-GB:
+  nav: *id001
+en-GD:
+  nav: *id001
+en-GG:
+  nav: *id001
+en-GH:
+  nav: *id001
+en-GI:
+  nav: *id001
+en-GM:
+  nav: *id001
+en-GU:
+  nav: *id001
+en-GY:
+  nav: *id001
+en-HK:
+  nav: *id001
+en-IE:
+  nav: *id001
+en-IL:
+  nav: *id001
+en-IM:
+  nav: *id001
+en-IN:
+  nav: *id001
+en-IO:
+  nav: *id001
+en-JE:
+  nav: *id001
+en-JM:
+  nav: *id001
+en-KE:
+  nav: *id001
+en-KI:
+  nav: *id001
+en-KN:
+  nav: *id001
+en-KY:
+  nav: *id001
+en-LC:
+  nav: *id001
+en-LR:
+  nav: *id001
+en-LS:
+  nav: *id001
+en-MG:
+  nav: *id001
+en-MH:
+  nav: *id001
+en-MO:
+  nav: *id001
+en-MP:
+  nav: *id001
+en-MS:
+  nav: *id001
+en-MT:
+  nav: *id001
+en-MU:
+  nav: *id001
+en-MW:
+  nav: *id001
+en-MY:
+  nav: *id001
+en-NA:
+  nav: *id001
+en-NF:
+  nav: *id001
+en-NG:
+  nav: *id001
+en-NL:
+  nav: *id001
+en-NR:
+  nav: *id001
+en-NU:
+  nav: *id001
+en-NZ:
+  nav: *id001
+en-PG:
+  nav: *id001
+en-PH:
+  nav: *id001
+en-PK:
+  nav: *id001
+en-PN:
+  nav: *id001
+en-PR:
+  nav: *id001
+en-PW:
+  nav: *id001
+en-RW:
+  nav: *id001
+en-SB:
+  nav: *id001
+en-SC:
+  nav: *id001
+en-SD:
+  nav: *id001
+en-SE:
+  nav: *id001
+en-SG:
+  nav: *id001
+en-SH:
+  nav: *id001
+en-SI:
+  nav: *id001
+en-SL:
+  nav: *id001
+en-SS:
+  nav: *id001
+en-SX:
+  nav: *id001
+en-SZ:
+  nav: *id001
+en-TC:
+  nav: *id001
+en-TK:
+  nav: *id001
+en-TO:
+  nav: *id001
+en-TT:
+  nav: *id001
+en-TV:
+  nav: *id001
+en-TZ:
+  nav: *id001
+en-UG:
+  nav: *id001
+en-UM:
+  nav: *id001
+en-US:
+  nav: *id001
+en-VC:
+  nav: *id001
+en-VG:
+  nav: *id001
+en-VI:
+  nav: *id001
+en-VU:
+  nav: *id001
+en-WS:
+  nav: *id001
+en-ZA:
+  nav: *id001
+en-ZM:
+  nav: *id001
+en-ZW:
+  nav: *id001
+es:
+  nav: &id002
+  - title: Servicios
+    section: servicios
+  - title: Portafolio
+    section: portafolio
+  - title: Sobre Nosotros
+    section: nosotros
+  - title: Cronología
+    section: cronologia
+  - title: Equipo
+    section: equipo
+  - title: Contáctenos
+    section: contacto
+  - title: Fuente de la plantilla
+    url: https://github.com/raviriley/agency-jekyll-theme/
+es-419:
+  nav: *id002
+es-AR:
+  nav: *id002
+es-BO:
+  nav: *id002
+es-BR:
+  nav: *id002
+es-BZ:
+  nav: *id002
+es-CL:
+  nav: *id002
+es-CO:
+  nav: *id002
+es-CR:
+  nav: *id002
+es-CU:
+  nav: *id002
+es-DO:
+  nav: *id002
+es-EC:
+  nav: *id002
+es-ES:
+  nav: *id002
+es-GQ:
+  nav: *id002
+es-GT:
+  nav: *id002
+es-HN:
+  nav: *id002
+es-MX:
+  nav: *id002
+es-NI:
+  nav: *id002
+es-PA:
+  nav: *id002
+es-PE:
+  nav: *id002
+es-PH:
+  nav: *id002
+es-PR:
+  nav: *id002
+es-PY:
+  nav: *id002
+es-SV:
+  nav: *id002
+es-US:
+  nav: *id002
+es-UY:
+  nav: *id002
+es-VE:
+  nav: *id002
+de:
+  nav: &id003
+  - title: Leistungen
+    section: Leistungen
+  - title: Portfolio
+    section: Portfolio
+  - title: Über uns
+    section: Ueber
+  - title: Geschichte
+    section: Geschichte
+  - title: Team
+    section: Team
+  - title: Kontakt
+    section: Kontakt
+  - title: Quellcode des Themas
+    url: https://github.com/raviriley/agency-jekyll-theme/
+de-AT:
+  nav: *id003
+de-BE:
+  nav: *id003
+de-CH:
+  nav: *id003
+de-DE:
+  nav: *id003
+de-IT:
+  nav: *id003
+de-LI:
+  nav: *id003
+de-LU:
+  nav: *id003
