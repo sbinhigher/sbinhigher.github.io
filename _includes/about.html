@@ -1,35 +1,49 @@
-<!-- About -->
-{% if site.locale and site.locale != "" and site.locale != nil %}
-<section class="page-section" id="{{ site.data.sitetext[site.locale].about.section | default: "about" }}">
+<!-- _includes/about.html (custom two‑column layout) -->
+<section class="page-section" id="{{ site.data.sitetext[site.locale].about.section | default: 'about' }}">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].about.title | default: "About Us" }}</h2>
-        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].about.text | default: "" }}</h3>
-      </div>
+    {% assign about = site.data.sitetext[site.locale].about %}
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">{{ about.title | default: 'About' }}</h2>
     </div>
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <div class="large text-muted">{{ site.data.sitetext[site.locale].about.body | markdownify }}</div>
+
+    <div class="about-wrap">
+      <div class="about-photo">
+        {% assign photo = about.photo | default: 'assets/img/profile.jpg' %}
+        <img src="{{ photo | relative_url }}" alt="{{ about.name | default: 'profile' }}">
+      </div>
+
+      <div class="about-info">
+        {% if about.slogan %}<p class="slogan">{{ about.slogan }}</p>{% endif %}
+        {% if about.name %}<h3 class="name">{{ about.name }}</h3>{% endif %}
+        {% if about.role %}<p class="role">{{ about.role }}</p>{% endif %}
+
+        {% if about.experience %}
+        <div class="about-block">
+          <h4>경력</h4>
+          <ul>
+            {% for x in about.experience %}<li>{{ x }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if about.activities %}
+        <div class="about-block">
+          <h4>활동내역</h4>
+          <ul>
+            {% for x in about.activities %}<li>{{ x }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if about.certifications %}
+        <div class="about-block">
+          <h4>자격증</h4>
+          <ul>
+            {% for x in about.certifications %}<li>{{ x }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>
 </section>
-{% else %}
-<section class="page-section" id="{{ site.data.sitetext.about.section | default: "about" }}">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.about.title | default: "About Us" }}</h2>
-        <h3 class="section-subheading text-muted">{{ site.data.sitetext.about.text | default: "" }}</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <div class="large text-muted">{{ site.data.sitetext.about.body | markdownify }}</div>
-      </div>
-    </div>
-  </div>
-</section>
-{% endif %}
-<!-- End About -->
