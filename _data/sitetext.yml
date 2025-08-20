@@ -21,6 +21,7 @@ en:
     - title: '[Markdown](https://en.wikipedia.org/wiki/Markdown)'
       desc: Your description here, full **Markdown** support
       icon: fab fa-markdown
+    
   portfolio:
     title: Portfolio
     text: 대표 프로젝트
@@ -33,6 +34,7 @@ en:
     - title: 도로 혼잡 예측
       desc: 이상치 탐지 후 고혼잡 분류
       modal: false
+      
   timeline:
     title: History
     text: 간단한 경력 타임라인
@@ -42,65 +44,7 @@ en:
       year: 2023–2025
       desc: 풍력 결함 탐지, 도로 혼잡 예측, 관광 데이터 분석 수행
     end: To be continued
-  about:
-    title: About
-    text: 데이터 분석/머신러닝 프로젝트 포트폴리오입니다.
-    section: about
-  clients: &id003
-    section: clients
-    max-height: 100px
-    horizontal-scrolling: ''
-    list:
-    - title: envato
-      url: https://github.com/raviriley/agency-jekyll-theme
-      logo: assets/img/clients/envato.jpg
-    - title: designmodo
-      url: https://github.com/raviriley/agency-jekyll-theme
-      logo: assets/img/clients/designmodo.jpg
-    - title: themeforest
-      url: https://github.com/raviriley/agency-jekyll-theme
-      logo: assets/img/clients/themeforest.jpg
-    - title: Creative Market
-      url: https://github.com/raviriley/agency-jekyll-theme
-      logo: assets/img/clients/creative-market.jpg
-  team: &id004
-    title: OUR AMAZING TEAM
-    text: Lorem ipsum dolor sit amet consectetur.
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-      laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias
-      ut unde. **Markdown** supported.
-    section: team
-    people:
-    - name: Kay Garland
-      role: Lead Designer
-      image: assets/img/team/500x500.jpg
-      social:
-      - url: https://twitter.com
-        icon: fab fa-twitter
-      - url: https://facebook.com
-        icon: fab fa-facebook-f
-      - url: https://linkedin.com
-        icon: fab fa-linkedin-in
-    - name: Larry Parker
-      role: Lead Marketer
-      image: assets/img/team/2.jpg
-      social:
-      - url: https://twitter.com
-        icon: fab fa-twitter
-      - url: https://facebook.com
-        icon: fab fa-facebook-f
-      - url: https://linkedin.com
-        icon: fab fa-linkedin-in
-    - name: Diana Perterson
-      role: Lead Developer
-      image: assets/img/team/500x500.jpg
-      social:
-      - url: https://twitter.com
-        icon: fab fa-twitter
-      - url: https://facebook.com
-        icon: fab fa-facebook-f
-      - url: https://linkedin.com
-        icon: fab fa-linkedin-in
+        
   contact: &id005
     title: Contact Us
     text: Lorem ipsum or call 123456789
@@ -115,6 +59,7 @@ en:
     message-validation: Please enter a message.
     subject: Contact Form Submission
     submit: Send Message
+    
   footer: &id006
     legal: Privacy Policy
     social:
@@ -129,6 +74,7 @@ en:
     - url: https://instagram.com
       icon: fab fa-instagram
 en-001:
+
   header: *id001
   services: *id002
   portfolio: &id007
