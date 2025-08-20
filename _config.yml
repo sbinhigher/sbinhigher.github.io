@@ -1,7 +1,10 @@
 title: sbinhigher
 url: https://sbinhigher.github.io
-baseurl: ""   # 사용자 사이트는 빈 문자열
-remote_theme: raviriley/agency-jekyll-theme
+baseurl: ""               # 사용자 사이트면 빈 문자열
+locale: "en"
+
+# Agency 원격 테마 (깃허브 페이지 호환)
+remote_theme: y7kim/agency-jekyll-theme
 
 # 선택: 소셜/연락처
 email: sbinhigher@email.com
