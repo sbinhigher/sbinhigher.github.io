@@ -27,6 +27,23 @@ en:
     - title: Creative Market
       url: https://github.com/raviriley/agency-jekyll-theme
       logo: assets/img/clients/creative-market.jpg
+
+ Skills: &id002
+    title: My skills
+    text: Lorem ipsum
+    section: services
+    list:
+    - title: Data Analysis
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+        quam architecto quo inventore harum ex magni, dicta impedit.
+      icon: fas fa-shopping-cart
+    - title: Project Leading
+      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
+        quam architecto quo inventore harum ex magni, dicta impedit.
+      icon: Data Visualization
+    - title: '[Markdown](https://en.wikipedia.org/wiki/Markdown)'
+      desc: Your description here, full **Markdown** support
+      icon: fab fa-markdown
   
   portfolio:
     title: Portfolio
