@@ -1,7 +1,8 @@
 en:
+# 홈페이지 헤더
   header: &id001
-    title: Welcome to my Rèsumè # 메인 슬로건
-    text: Data Analyst
+    title: Welcome to my Rèsumè🚀 # 메인 슬로건
+    text: KO SEONG BIN
     button: See More
     buttonlink: '#portfolio'
   services: &id002
