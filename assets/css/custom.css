@@ -1,0 +1,84 @@
+/* assets/css/custom.css — About two-column layout & general tweaks */
+
+:root{
+  --brand: #0ea5e9;
+  --brand-dark:#0284c7;
+  --text:#111827;
+  --muted:#6b7280;
+}
+
+/* --- ABOUT --- */
+#about .about-wrap{
+  display:grid;
+  grid-template-columns: 260px 1fr;
+  gap: 28px;
+  align-items:start;
+  margin-top: 28px;
+}
+
+#about .about-photo img{
+  display:block;
+  width:100%;
+  max-width: 240px;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.08);
+}
+
+#about .about-info .slogan{
+  margin:0 0 6px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+#about .about-info .name{
+  margin:0 0 6px;
+  font-size: 1.75rem;
+  line-height:1.2;
+  color: var(--text);
+  font-weight: 800;
+}
+
+#about .about-info .role{
+  margin:0 0 14px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+#about .about-block{
+  margin: 12px 0 0;
+}
+
+#about .about-block h4{
+  margin: 16px 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+#about .about-block ul{
+  margin:0;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+@media (max-width: 768px){
+  #about .about-wrap{
+    grid-template-columns: 1fr;
+  }
+  #about .about-photo img{
+    max-width: 220px;
+  }
+}
+
+/* Basic navbar + primary button tint (optional) */
+a, .text-primary{ color: var(--brand) !important; }
+.btn-primary{
+  background-color: var(--brand) !important;
+  border-color: var(--brand) !important;
+}
+.btn-primary:hover, .btn-primary:focus{
+  background-color: var(--brand-dark) !important;
+  border-color: var(--brand-dark) !important;
+}
