@@ -1,0 +1,38 @@
+en:
+  header:
+    title: "데이터 분석 & ML 포트폴리오"
+    text: "고성빈 | Data Analyst"
+    button: "See More"
+    buttonlink: "#portfolio"
+
+  about:
+    title: "About"
+    text: "데이터 분석/머신러닝 프로젝트를 정리한 포트폴리오입니다."
+    section: "about"
+
+  timeline:
+    title: "History"
+    text: "간단한 경력 타임라인"
+    section: "timeline"
+    events:
+      - title: "Data Analyst"
+        year: "2023-2025"
+        desc: "풍력 결함 탐지, 도로 혼잡 예측, 관광 데이터 분석 수행"
+      - title: "Projects"
+        year: "Selected"
+        desc: "YOLOv7 기반 결함 탐지 / 시계열 고혼잡 분류 / SNA·코호트·퍼널 분석"
+    end: "To be continued"
+
+  portfolio:
+    title: "Portfolio"
+    text: "대표 프로젝트"
+    section: "portfolio"
+    closebutton: "Close"
+    # 간단 카드 예시(이미지는 나중에 추가 가능)
+    list:
+      - title: "풍력 결함 탐지 (YOLOv7)"
+        desc: "약 90% 정확도, 생산성 99.3% 향상"
+        modal: false
+      - title: "도로 혼잡 예측"
+        desc: "이상치 구간 탐지 후 고혼잡 분류"
+        modal: false
