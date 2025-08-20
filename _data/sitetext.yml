@@ -5,13 +5,14 @@ en:
     button: "See More"
     buttonlink: "#portfolio"
 
+  en:
   about:
     title: "About"
     section: "about"
     slogan: "데이터로 가치를 만드는 사람"
     name: "고성빈"
     role: "Data Analyst"
-    photo: "assets/img/profile.jpg"   # 여기에 본인 사진 파일명을 맞추세요 (예: profile.jpg)
+    photo: "assets/img/profile.jpg"   # 본인 사진 경로
     experience:
       - "2024–현재 · OO기업 · 데이터 분석"
       - "2023 · 프로젝트 A · 모델 성능 개선"
@@ -21,6 +22,7 @@ en:
     certifications:
       - "SQL 개발자"
       - "ADsP"
+      
   timeline:
     title: "History"
     text: "간단한 경력 타임라인"
