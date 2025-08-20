@@ -5,23 +5,29 @@ en:
     text: KO SEONG BIN
     button: See More
     buttonlink: '#portfolio'
-  services: &id002
-    title: Services
-    text: Lorem ipsum
-    section: services
+
+  about:
+    title: About
+    text: 데이터 분석/머신러닝 프로젝트 포트폴리오입니다.
+    section: about
+  clients: &id003
+    section: clients
+    max-height: 100px
+    horizontal-scrolling: ''
     list:
-    - title: E-Commerce
-      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
-        quam architecto quo inventore harum ex magni, dicta impedit.
-      icon: fas fa-shopping-cart
-    - title: Responsive Design
-      desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
-        quam architecto quo inventore harum ex magni, dicta impedit.
-      icon: fas fa-laptop
-    - title: '[Markdown](https://en.wikipedia.org/wiki/Markdown)'
-      desc: Your description here, full **Markdown** support
-      icon: fab fa-markdown
-    
+    - title: envato
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/envato.jpg
+    - title: designmodo
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/designmodo.jpg
+    - title: themeforest
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/themeforest.jpg
+    - title: Creative Market
+      url: https://github.com/raviriley/agency-jekyll-theme
+      logo: assets/img/clients/creative-market.jpg
+  
   portfolio:
     title: Portfolio
     text: 대표 프로젝트
