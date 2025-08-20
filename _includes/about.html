@@ -1,10 +1,23 @@
-<!-- _includes/about.html (custom two‑column layout) -->
+<!-- _includes/about.html -->
 <section class="page-section" id="{{ site.data.sitetext[site.locale].about.section | default: 'about' }}">
   <div class="container">
     {% assign about = site.data.sitetext[site.locale].about %}
     <div class="text-center">
       <h2 class="section-heading text-uppercase">{{ about.title | default: 'About' }}</h2>
     </div>
+
+    <!-- 섹션 전용 스타일: head를 건드리지 않음 -->
+    <style>
+      #about .about-wrap{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start;margin-top:28px}
+      #about .about-photo img{display:block;width:100%;max-width:240px;max-height:320px;object-fit:cover;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+      #about .slogan{margin:0 0 6px;font-size:1rem;color:#6b7280}
+      #about .name{margin:0 0 6px;font-size:1.75rem;line-height:1.2;color:#111827;font-weight:800}
+      #about .role{margin:0 0 14px;font-size:1rem;color:#6b7280}
+      #about .about-block{margin:12px 0 0}
+      #about .about-block h4{margin:16px 0 6px;font-size:1.05rem;font-weight:700;color:#111827}
+      #about .about-block ul{margin:0;padding-left:18px;color:#111827}
+      @media (max-width:768px){#about .about-wrap{grid-template-columns:1fr}#about .about-photo img{max-width:220px}}
+    </style>
 
     <div class="about-wrap">
       <div class="about-photo">
@@ -20,29 +33,20 @@
         {% if about.experience %}
         <div class="about-block">
           <h4>경력</h4>
-          <ul>
-            {% for x in about.experience %}<li>{{ x }}</li>{% endfor %}
-          </ul>
-        </div>
-        {% endif %}
+          <ul>{% for x in about.experience %}<li>{{ x }}</li>{% endfor %}</ul>
+        </div>{% endif %}
 
         {% if about.activities %}
         <div class="about-block">
           <h4>활동내역</h4>
-          <ul>
-            {% for x in about.activities %}<li>{{ x }}</li>{% endfor %}
-          </ul>
-        </div>
-        {% endif %}
+          <ul>{% for x in about.activities %}<li>{{ x }}</li>{% endfor %}</ul>
+        </div>{% endif %}
 
         {% if about.certifications %}
         <div class="about-block">
           <h4>자격증</h4>
-          <ul>
-            {% for x in about.certifications %}<li>{{ x }}</li>{% endfor %}
-          </ul>
-        </div>
-        {% endif %}
+          <ul>{% for x in about.certifications %}<li>{{ x }}</li>{% endfor %}</ul>
+        </div>{% endif %}
       </div>
     </div>
   </div>
