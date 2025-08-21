@@ -22,7 +22,73 @@ ko:
       - "SQLD (예시)"
       - "ADsP (예시)"
       - "Tableau Desktop Specialist (예시)"
-
+      
+  portfolio:
+    enabled: true
+    id: portfolio
+    title: "Portfolio"
+    text: "클릭하면 상세 내용을 확인할 수 있습니다."
+    section:
+      - title: "풍력발전기 결함 탐지"
+        subtitle: "YOLOv7 · 품질관리"
+        modal: "modal-wind"
+        category: "Computer Vision"
+        image: "assets/img/portfolio/p1.jpg"
+        alt: "Wind-turbine defect detection"
+        description: "정확도 90%, 검사 생산성 93% 향상. 5만건 전수검·가이드라인 수립."
+        meta:
+          - "Role: Data QA & Modeling"
+          - "Stack: Python, YOLOv7, Labelme"
+      - title: "이커머스 코호트/퍼널 분석"
+        subtitle: "SQL · 재구매율"
+        modal: "modal-olist"
+        category: "Data-Analysis"
+        image: "assets/img/portfolio/p2.jpg"
+        alt: "E-commerce cohort/funnel"
+        description: "SQL 기반 코호트/퍼널과 재구매율 KPI 트래킹, 전환 개선 인사이트 도출."
+        meta:
+          - "Role: Analyst"
+          - "Stack: SQL, Python, Tableau"
+      - title: "교통혼잡 이상치 탐지"
+        subtitle: "Time-series"
+        modal: "modal-traffic"
+        category: "Data-Analysis"
+        image: "assets/img/portfolio/p3.jpg"
+        alt: "Traffic anomaly detection"
+        description: "시계열 이상치 탐지로 혼잡 경보와 정책 의사결정 지표 제공."
+        meta:
+          - "Role: Data Scientist"
+          - "Stack: Python, statsmodels/sklearn"
+      - title: "정책 효과 대시보드"
+        subtitle: "SQL→Excel"
+        modal: "modal-policy"
+        category: "Web-Application"
+        image: "assets/img/portfolio/p4.jpg"
+        alt: "Policy KPI dashboard"
+        description: "정책 전/후 KPI 비교, 지역별 성과 트래킹 대시보드."
+        meta:
+          - "Role: Analyst"
+          - "Stack: SQL, Excel (Pivot/Charts)"
+      - title: "라벨링 품질관리 가이드"
+        subtitle: "QA · 기준화"
+        modal: "modal-qa"
+        category: "Others"
+        image: "assets/img/portfolio/p5.jpg"
+        alt: "Labeling QA guideline"
+        description: "결함 유형 정의·예시 이미지로 일관성 확보, 운영 표준화."
+        meta:
+          - "Role: Lead QA"
+          - "Stack: Process Design"
+      - title: "헬스케어 데이터 리서치"
+        subtitle: "Dashboard PoC"
+        modal: "modal-health"
+        category: "Data-Analysis"
+        image: "assets/img/portfolio/p6.jpg"
+        alt: "Healthcare analytics"
+        description: "활동/커뮤니티 지표 기반 개인화 인사이트."
+        meta:
+          - "Role: Analyst"
+          - "Stack: Python, Tableau"
   services:
     enabled: true
     id: services

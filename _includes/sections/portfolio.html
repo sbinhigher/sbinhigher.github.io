@@ -1,0 +1,122 @@
+{% comment %}
+Portfolio section with filter tabs similar to parkeunsang.github.io.
+Data source: site.data.sitetext_overrides[site.locale].portfolio or fallback.
+Categories are taken from each item.category (slug-friendly).
+{% endcomment %}
+<section id="{{ site.data.sitetext_overrides[site.locale].portfolio.id | default: 'portfolio' }}" class="bg-light">
+  {% assign pdata = site.data.sitetext_overrides[site.locale].portfolio | default: site.data.sitetext[site.locale].portfolio | default: site.data.sitetext.en.portfolio %}
+  {% if pdata and pdata.enabled != false %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">{{ pdata.title | default: 'Portfolio' }}</h2>
+        {% if pdata.text %}<h3 class="section-subheading text-muted">{{ pdata.text }}</h3>{% endif %}
+      </div>
+    </div>
+
+    <!-- Filter tabs -->
+    {% assign categories = "" | split: "" %}
+    {% for item in pdata.section %}
+      {% assign cat = item.category | default: 'Others' %}
+      {% assign categories = categories | push: cat %}
+    {% endfor %}
+    {% assign categories = categories | uniq %}
+
+    <div class="row mb-4">
+      <div class="col text-center">
+        <div id="pf-filters" class="btn-group btn-group-sm" role="group" aria-label="Portfolio filters">
+          <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
+          {% for c in categories %}
+            <button type="button" class="btn btn-outline-secondary" data-filter="{{ c | downcase | replace: ' ', '-' }}">{{ c }}</button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="row" id="pf-grid">
+      {% for item in pdata.section %}
+      {% assign cat = item.category | default: 'Others' %}
+      {% assign catslug = cat | downcase | replace: ' ', '-' %}
+      <div class="col-md-4 col-sm-6 portfolio-item" data-category="{{ catslug }}">
+        <a class="portfolio-link" data-toggle="modal" href="#{{ item.modal }}">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.title }}">
+        </a>
+        <div class="portfolio-caption">
+          <h4>{{ item.title }}</h4>
+          <p class="text-muted">{{ item.subtitle | default: item.category }}</p>
+          {% if item.url %}<p class="small"><a href="{{ item.url }}" target="_blank" rel="noopener">Link</a></p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Modals -->
+  {% for item in pdata.section %}
+  <div class="portfolio-modal modal fade" id="{{ item.modal }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr"><div class="rl"></div></div>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <h2 class="text-uppercase">{{ item.title }}</h2>
+                <p class="item-intro text-muted">{{ item.subtitle | default: item.category }}</p>
+                <img class="img-fluid d-block mx-auto" src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.title }}">
+                {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                {% if item.meta and item.meta.size > 0 %}
+                <ul class="list-inline">
+                  {% for m in item.meta %}
+                    <li>{{ m }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+                {% if item.url %}<a class="btn btn-primary" href="{{ item.url }}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Visit</a>{% endif %}
+                <button class="btn btn-secondary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- Simple filter script -->
+  <script>
+  (function() {
+    var buttons = document.querySelectorAll('#pf-filters [data-filter]');
+    var items = document.querySelectorAll('#pf-grid [data-category]');
+    function setActive(btn) {
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+    }
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        setActive(btn);
+        var filt = btn.getAttribute('data-filter');
+        items.forEach(function(it){
+          if (filt === 'all' || it.getAttribute('data-category') === filt) {
+            it.style.display = '';
+          } else {
+            it.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+  </script>
+  {% endif %}
+</section>
