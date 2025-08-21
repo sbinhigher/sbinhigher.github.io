@@ -1,0 +1,43 @@
+ko:
+  about:
+    enabled: true
+    id: about
+    photo: assets/img/profile.jpg
+    slogan: "데이터로 문제를 정의하고, 지표로 해결합니다."
+    name: "고 성빈 (Seongbin Ko)"
+    role: "데이터 분석가 · 정책 데이터 관리 지망"
+    experience:
+      - "데이터 분석 2년: SQL·Python 기반 지표/모델 분석"
+      - "풍력발전 결함탐지: 정확도 90%·생산성 93% 개선"
+      - "이커머스(Olist) 분석: 코호트/퍼널·재구매율 지표 관리"
+      - "교통혼잡 시계열 분석: 이상치 탐지 및 정책 의사결정 보조"
+    activities:
+      - "헬스케어/관광 데이터 리서치 및 대시보드 PoC"
+      - "라벨링 품질관리 가이드 수립·전수검수 운영"
+      - "GitHub 포트폴리오/기술 블로그 정리"
+    certificates:
+      - "SQLD (예시: 보유/예정으로 교체)"
+      - "ADsP (예시)"
+      - "Tableau Desktop Specialist (예시)"
+
+en:
+  about:
+    enabled: true
+    id: about
+    photo: assets/img/profile.jpg
+    slogan: "Define with data, solve with metrics."
+    name: "Seongbin Ko"
+    role: "Data Analyst · Policy Data Management"
+    experience:
+      - "2 years of analytics: SQL/Python metric & model analysis"
+      - "Wind turbine defect detection: 90% accuracy, 93% productivity gain"
+      - "E‑commerce (Olist): cohort/funnel & repurchase KPIs"
+      - "Traffic time-series: anomaly detection & policy insights"
+    activities:
+      - "Healthcare/Tourism data research & dashboard PoC"
+      - "Labeling QA guideline & full inspection operations"
+      - "GitHub portfolio & tech blogging"
+    certificates:
+      - "SQLD (placeholder)"
+      - "ADsP (placeholder)"
+      - "Tableau Desktop Specialist (placeholder)"

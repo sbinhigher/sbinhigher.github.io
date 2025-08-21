@@ -1,53 +1,63 @@
-<!-- _includes/about.html -->
-<section class="page-section" id="{{ site.data.sitetext[site.locale].about.section | default: 'about' }}">
+{% comment %}
+About section with photo-left and details-right.
+Prefers _data/sitetext_overrides.yml if present; falls back to _data/sitetext.yml
+Order: slogan > name > role > experience > activities > certificates
+{% endcomment %}
+<section id="{{ site.data.sitetext_overrides[site.locale].about.id | default: site.data.sitetext[site.locale].about.id | default: 'about' }}" class="bg-light">
   <div class="container">
-    {% assign about = site.data.sitetext[site.locale].about %}
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">{{ about.title | default: 'About' }}</h2>
-    </div>
-
-    <!-- 섹션 전용 스타일: head를 건드리지 않음 -->
-    <style>
-      #about .about-wrap{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start;margin-top:28px}
-      #about .about-photo img{display:block;width:100%;max-width:240px;max-height:320px;object-fit:cover;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
-      #about .slogan{margin:0 0 6px;font-size:1rem;color:#6b7280}
-      #about .name{margin:0 0 6px;font-size:1.75rem;line-height:1.2;color:#111827;font-weight:800}
-      #about .role{margin:0 0 14px;font-size:1rem;color:#6b7280}
-      #about .about-block{margin:12px 0 0}
-      #about .about-block h4{margin:16px 0 6px;font-size:1.05rem;font-weight:700;color:#111827}
-      #about .about-block ul{margin:0;padding-left:18px;color:#111827}
-      @media (max-width:768px){#about .about-wrap{grid-template-columns:1fr}#about .about-photo img{max-width:220px}}
-    </style>
-
-    <div class="about-wrap">
-      <div class="about-photo">
-        {% assign photo = about.photo | default: 'assets/img/profile.jpg' %}
-        <img src="{{ photo | relative_url }}" alt="{{ about.name | default: 'profile' }}">
+    {% assign about = site.data.sitetext_overrides[site.locale].about | default: site.data.sitetext[site.locale].about | default: site.data.sitetext.en.about %}
+    {% if about and about.enabled != false %}
+    <div class="row justify-content-center align-items-start">
+      <!-- LEFT: photo -->
+      <div class="col-md-4 mb-4 mb-md-0 text-center">
+        {% if about.photo %}
+          <img src="{{ about.photo | relative_url }}" alt="{{ about.name | default: 'Profile photo' }}"
+               class="img-fluid rounded shadow-sm" style="max-width: 260px;">
+        {% endif %}
       </div>
 
-      <div class="about-info">
-        {% if about.slogan %}<p class="slogan">{{ about.slogan }}</p>{% endif %}
-        {% if about.name %}<h3 class="name">{{ about.name }}</h3>{% endif %}
-        {% if about.role %}<p class="role">{{ about.role }}</p>{% endif %}
+      <!-- RIGHT: details -->
+      <div class="col-md-8">
+        {% if about.slogan %}
+          <p class="text-uppercase small mb-2" style="letter-spacing:.08em; opacity:.8;">{{ about.slogan }}</p>
+        {% endif %}
 
-        {% if about.experience %}
-        <div class="about-block">
-          <h4>경력</h4>
-          <ul>{% for x in about.experience %}<li>{{ x }}</li>{% endfor %}</ul>
-        </div>{% endif %}
+        {% if about.name %}
+          <h2 class="mb-1">{{ about.name }}</h2>
+        {% endif %}
 
-        {% if about.activities %}
-        <div class="about-block">
-          <h4>활동내역</h4>
-          <ul>{% for x in about.activities %}<li>{{ x }}</li>{% endfor %}</ul>
-        </div>{% endif %}
+        {% if about.role %}
+          <h5 class="text-muted mb-4">{{ about.role }}</h5>
+        {% endif %}
 
-        {% if about.certifications %}
-        <div class="about-block">
-          <h4>자격증</h4>
-          <ul>{% for x in about.certifications %}<li>{{ x }}</li>{% endfor %}</ul>
-        </div>{% endif %}
+        {% if about.experience and about.experience.size > 0 %}
+          <h6 class="mt-3">경력</h6>
+          <ul class="mb-3">
+            {% for item in about.experience %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if about.activities and about.activities.size > 0 %}
+          <h6 class="mt-3">활동내역</h6>
+          <ul class="mb-3">
+            {% for item in about.activities %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if about.certificates and about.certificates.size > 0 %}
+          <h6 class="mt-3">자격증</h6>
+          <ul class="mb-0">
+            {% for item in about.certificates %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </div>
     </div>
+    {% endif %}
   </div>
 </section>
