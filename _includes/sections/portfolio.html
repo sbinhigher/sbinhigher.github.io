@@ -1,122 +1,128 @@
 {% comment %}
-Portfolio section with filter tabs similar to parkeunsang.github.io.
-Data source: site.data.sitetext_overrides[site.locale].portfolio or fallback.
-Categories are taken from each item.category (slug-friendly).
+Portfolio section with category filters.
+Works with _portfolio/*.md items. Supported front matter:
+title, subtitle, image, alt, category (string) or categories (array), url (optional), modal (optional), description (optional), meta (array)
 {% endcomment %}
-<section id="{{ site.data.sitetext_overrides[site.locale].portfolio.id | default: 'portfolio' }}" class="bg-light">
-  {% assign pdata = site.data.sitetext_overrides[site.locale].portfolio | default: site.data.sitetext[site.locale].portfolio | default: site.data.sitetext.en.portfolio %}
-  {% if pdata and pdata.enabled != false %}
+<section id="{{ site.data.sitetext[site.locale].portfolio.id | default: 'portfolio' }}">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">{{ pdata.title | default: 'Portfolio' }}</h2>
-        {% if pdata.text %}<h3 class="section-subheading text-muted">{{ pdata.text }}</h3>{% endif %}
+        <h2 class="section-heading">{{ site.data.sitetext[site.locale].portfolio.title | default: 'Portfolio' }}</h2>
+        {% if site.data.sitetext[site.locale].portfolio.text %}
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].portfolio.text }}</h3>
+        {% endif %}
       </div>
     </div>
 
-    <!-- Filter tabs -->
-    {% assign categories = "" | split: "" %}
-    {% for item in pdata.section %}
-      {% assign cat = item.category | default: 'Others' %}
-      {% assign categories = categories | push: cat %}
+    {% assign items = site.portfolio | default: site.collections.portfolio.docs %}
+    {% assign categories = "" | split: "|" %}
+    {% for p in items %}
+      {% assign cats = p.categories | default: p.category | default: p.cat %}
+      {% if cats %}
+        {% if cats contains ',' %}{% assign cats = cats | split: ',' %}{% endif %}
+        {% unless cats instanceof Array %}{% assign cats = cats | arrayify %}{% endunless %}
+        {% for c in cats %}
+          {% assign c_trim = c | strip %}
+          {% unless categories contains c_trim %}
+            {% assign categories = categories | push: c_trim %}
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
     {% endfor %}
-    {% assign categories = categories | uniq %}
 
-    <div class="row mb-4">
-      <div class="col text-center">
-        <div id="pf-filters" class="btn-group btn-group-sm" role="group" aria-label="Portfolio filters">
-          <button type="button" class="btn btn-outline-secondary active" data-filter="all">All</button>
-          {% for c in categories %}
-            <button type="button" class="btn btn-outline-secondary" data-filter="{{ c | downcase | replace: ' ', '-' }}">{{ c }}</button>
-          {% endfor %}
-        </div>
+    <div class="text-center mb-4">
+      <div id="portfolio-filters" class="btn-group btn-group-sm" role="group">
+        <button type="button" class="btn btn-outline-primary active" data-filter="*">All</button>
+        {% for c in categories %}
+          <button type="button" class="btn btn-outline-primary" data-filter=".{{ c | handleize }}">{{ c }}</button>
+        {% endfor %}
       </div>
     </div>
 
-    <!-- Grid -->
-    <div class="row" id="pf-grid">
-      {% for item in pdata.section %}
-      {% assign cat = item.category | default: 'Others' %}
-      {% assign catslug = cat | downcase | replace: ' ', '-' %}
-      <div class="col-md-4 col-sm-6 portfolio-item" data-category="{{ catslug }}">
-        <a class="portfolio-link" data-toggle="modal" href="#{{ item.modal }}">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <i class="fas fa-plus fa-3x"></i>
+    <div class="row" id="portfolio-grid">
+      {% for p in items %}
+        {% assign cats = p.categories | default: p.category | default: p.cat %}
+        {% if cats %}
+          {% if cats contains ',' %}{% assign cats = cats | split: ',' %}{% endif %}
+          {% unless cats instanceof Array %}{% assign cats = cats | arrayify %}{% endunless %}
+        {% else %}
+          {% assign cats = '' | split: '|' %}
+        {% endif %}
+
+        {% assign class_list = '' %}
+        {% for c in cats %}
+          {% assign class_list = class_list | append: ' ' | append: c | handleize %}
+        {% endfor %}
+
+        <div class="col-md-4 col-sm-6 portfolio-item{{ class_list }}">
+          <a class="portfolio-link" data-toggle="modal" href="#{{ p.modal | default: p.slug }}">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
             </div>
+            <img class="img-fluid" src="{{ p.image | relative_url }}" alt="{{ p.alt | default: p.title }}">
+          </a>
+          <div class="portfolio-caption">
+            <h4>{{ p.title }}</h4>
+            <p class="text-muted">{{ p.subtitle }}</p>
           </div>
-          <img class="img-fluid" src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.title }}">
-        </a>
-        <div class="portfolio-caption">
-          <h4>{{ item.title }}</h4>
-          <p class="text-muted">{{ item.subtitle | default: item.category }}</p>
-          {% if item.url %}<p class="small"><a href="{{ item.url }}" target="_blank" rel="noopener">Link</a></p>{% endif %}
         </div>
-      </div>
       {% endfor %}
     </div>
   </div>
 
-  <!-- Modals -->
-  {% for item in pdata.section %}
-  <div class="portfolio-modal modal fade" id="{{ item.modal }}" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr"><div class="rl"></div></div>
-        </div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="modal-body">
-                <h2 class="text-uppercase">{{ item.title }}</h2>
-                <p class="item-intro text-muted">{{ item.subtitle | default: item.category }}</p>
-                <img class="img-fluid d-block mx-auto" src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.title }}">
-                {% if item.description %}<p>{{ item.description }}</p>{% endif %}
-                {% if item.meta and item.meta.size > 0 %}
-                <ul class="list-inline">
-                  {% for m in item.meta %}
-                    <li>{{ m }}</li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-                {% if item.url %}<a class="btn btn-primary" href="{{ item.url }}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Visit</a>{% endif %}
-                <button class="btn btn-secondary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close
-                </button>
+  {% comment %} Modals {% endcomment %}
+  {% for p in items %}
+    <div class="portfolio-modal modal fade" id="{{ p.modal | default: p.slug }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr"><div class="rl"></div></div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2>{{ p.title }}</h2>
+                  <p class="item-intro text-muted">{{ p.subtitle }}</p>
+                  <img class="img-fluid d-block mx-auto" src="{{ p.image | relative_url }}" alt="{{ p.alt | default: p.title }}">
+                  {% if p.description %}<p>{{ p.description }}</p>{% endif %}
+                  {% if p.meta %}
+                    <ul class="list-inline">
+                      {% for m in p.meta %}<li>{{ m }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                  {% if p.url %}<a class="btn btn-primary" href="{{ p.url }}" target="_blank" rel="noopener">View project</a>{% endif %}
+                  <button class="btn btn-secondary" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   {% endfor %}
 
-  <!-- Simple filter script -->
   <script>
   (function() {
-    var buttons = document.querySelectorAll('#pf-filters [data-filter]');
-    var items = document.querySelectorAll('#pf-grid [data-category]');
-    function setActive(btn) {
-      buttons.forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
+    var grid = document.getElementById('portfolio-grid');
+    var buttons = document.querySelectorAll('#portfolio-filters [data-filter]');
+    function matches(el, selector) {
+      if (selector === '*') return true;
+      return el.classList.contains(selector.substring(1)); // .class
     }
     buttons.forEach(function(btn){
       btn.addEventListener('click', function(){
-        setActive(btn);
-        var filt = btn.getAttribute('data-filter');
-        items.forEach(function(it){
-          if (filt === 'all' || it.getAttribute('data-category') === filt) {
-            it.style.display = '';
-          } else {
-            it.style.display = 'none';
-          }
+        buttons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        var sel = this.getAttribute('data-filter');
+        Array.prototype.forEach.call(grid.children, function(card){
+          if (matches(card, sel)) { card.style.display = ''; }
+          else { card.style.display = 'none'; }
         });
       });
     });
   })();
   </script>
-  {% endif %}
 </section>

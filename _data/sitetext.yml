@@ -1,47 +1,131 @@
-en:
+ko:
   header:
-    title: "데이터 분석 & ML 포트폴리오"
-    text: "고성빈 | Data Analyst"
-    button: "See More"
-    buttonlink: "#portfolio"
+    enabled: false
 
-  en:
   about:
+    enabled: true
+    id: about
     title: "About"
-    section: "about"
-    slogan: "데이터로 가치를 만드는 사람"
-    name: "고성빈"
-    role: "Data Analyst"
-    photo: "assets/img/profile.jpg"   # 본인 사진 경로
+    text: ""
+    body: ""
+    photo: assets/img/profile.jpg
+    slogan: "데이터로 문제를 정의하고, 지표로 해결합니다."
+    name: "고 성빈 (Seongbin Ko)"
+    role: "데이터 분석가 · 정책 데이터 관리 지망"
     experience:
-      - "2024–현재 · OO기업 · 데이터 분석"
-      - "2023 · 프로젝트 A · 모델 성능 개선"
+      - "데이터 분석 2년: SQL·Python 기반 지표/모델 분석"
+      - "풍력발전 결함탐지: 정확도 90%·생산성 93% 개선"
+      - "이커머스(Olist): 코호트/퍼널 · 재구매율 지표 관리"
+      - "교통혼잡 시계열 분석: 이상치 탐지 및 정책 의사결정 보조"
     activities:
-      - "데이터 커뮤니티 발표(2024)"
-      - "사내 분석 가이드 작성"
-    certifications:
-      - "SQL 개발자"
-      - "ADsP"
-      
-  timeline:
-    title: "History"
-    text: "간단한 경력 타임라인"
-    section: "timeline"
-    events:
-      - title: "Data Analyst"
-        year: "2023–2025"
-        desc: "풍력 결함 탐지, 도로 혼잡 예측, 관광 데이터 분석 수행"
-    end: "To be continued"
+      - "헬스케어/관광 데이터 리서치 및 대시보드 PoC"
+      - "라벨링 품질관리 가이드 수립·전수검수 운영"
+      - "GitHub 포트폴리오/기술 블로그 정리"
+    certificates:
+      - "SQLD (예시)"
+      - "ADsP (예시)"
+      - "Tableau Desktop Specialist (예시)"
+
+  services:
+    enabled: true
+    id: services
+    title: "Skills"
+    text: "분석/시각화/ML/도메인 역량을 카드 형태로 요약했습니다."
+    list:
+      - title: "SQL · 데이터 모델링"
+        desc: "복합 JOIN, 윈도우 함수, KPI 산출 쿼리 및 데이터 모델 설계 경험"
+        icon: "fas fa-database"
+      - title: "Python · 분석 자동화"
+        desc: "pandas/NumPy/Scikit-learn 기반 ETL·분석 파이프라인 구축"
+        icon: "fab fa-python"
+      - title: "Excel · 대시보드"
+        desc: "피벗/차트·PowerQuery로 실무형 KPI 대시보드 설계"
+        icon: "far fa-file-excel"
+      - title: "시계열 · 이상치 탐지"
+        desc: "교통/서비스 지표 이상 탐지 및 경보 임계 설정"
+        icon: "fas fa-chart-line"
+      - title: "Computer Vision"
+        desc: "YOLOv7 기반 결함 탐지, 데이터 품질관리·가이드 수립"
+        icon: "fas fa-camera"
+      - title: "정책 데이터 분석"
+        desc: "정책 전/후 효과 측정, 코호트/퍼널, 재구매율 지표 관리"
+        icon: "fas fa-balance-scale"
 
   portfolio:
+    enabled: true
+    id: portfolio
     title: "Portfolio"
-    text: "대표 프로젝트"
-    section: "portfolio"
-    closebutton: "Close"
+    text: "대표 프로젝트를 카드로 정리했습니다."
+
+  team:        { enabled: false }
+  timeline:    { enabled: false }
+  clients:     { enabled: false }
+  contact:     { enabled: false }
+  call_to_action: { enabled: false }
+  footer: {}
+
+en:
+  header:
+    enabled: false
+
+  about:
+    enabled: true
+    id: about
+    title: "About"
+    text: ""
+    body: ""
+    photo: assets/img/profile.jpg
+    slogan: "Define with data, solve with metrics."
+    name: "Seongbin Ko"
+    role: "Data Analyst · Policy Data Management"
+    experience:
+      - "2 years of analytics: SQL/Python metric & model analysis"
+      - "Wind turbine defect detection: 90% accuracy, 93% productivity gain"
+      - "E‑commerce (Olist): cohort/funnel & repurchase KPIs"
+      - "Traffic time-series: anomaly detection & policy insights"
+    activities:
+      - "Healthcare/Tourism data research & dashboard PoC"
+      - "Labeling QA guideline & full inspection operations"
+      - "GitHub portfolio & tech blogging"
+    certificates:
+      - "SQLD (placeholder)"
+      - "ADsP (placeholder)"
+      - "Tableau Desktop Specialist (placeholder)"
+
+  services:
+    enabled: true
+    id: services
+    title: "Skills"
+    text: "Key skill cards used in real projects."
     list:
-      - title: "풍력 결함 탐지 (YOLOv7)"
-        desc: "약 90% 정확도, 생산성 99.3% 향상"
-        modal: false
-      - title: "도로 혼잡 예측"
-        desc: "이상치 탐지 후 고혼잡 분류"
-        modal: false
+      - title: "SQL & Data Modeling"
+        desc: "Window functions, KPI queries, schema design"
+        icon: "fas fa-database"
+      - title: "Python · Automation"
+        desc: "ETL and analytics with pandas/NumPy/Scikit-learn"
+        icon: "fab fa-python"
+      - title: "Excel · Dashboard"
+        desc: "Pivot, charts, and practical KPI dashboards"
+        icon: "far fa-file-excel"
+      - title: "Time-series & Anomaly"
+        desc: "Anomaly detection for traffic/service metrics"
+        icon: "fas fa-chart-line"
+      - title: "Computer Vision"
+        desc: "YOLOv7 detection and data QA guideline"
+        icon: "fas fa-camera"
+      - title: "Policy Data Analytics"
+        desc: "Before/after policy KPI measurement, cohorts/funnels"
+        icon: "fas fa-balance-scale"
+
+  portfolio:
+    enabled: true
+    id: portfolio
+    title: "Portfolio"
+    text: "Selected projects."
+
+  team:        { enabled: false }
+  timeline:    { enabled: false }
+  clients:     { enabled: false }
+  contact:     { enabled: false }
+  call_to_action: { enabled: false }
+  footer: {}
