@@ -1,26 +1,61 @@
-# ---- Site basics ----
-title: "sbinhigher"
-description: "Seongbin Ko · Portfolio"
+# -----------------------------
+# Site basics
+# -----------------------------
+title: "sbinhigher · Portfolio"
+description: "Seongbin Ko — Data Analyst"
 url: "https://sbinhigher.github.io"
-baseurl: ""        # 사용자 페이지면 빈 문자열
-locale: "ko"       # 다국어 사용 시 'ko' 또는 'en'
+baseurl: ""          # user/organization site -> keep empty
+locale: "ko"
 
-# ---- Theme (GitHub Pages에서 자동 호환) ----
-remote_theme: StartBootstrap/startbootstrap-agency-jekyll
+# -----------------------------
+# Remote theme (WORKING)
+# -----------------------------
+# The previous remote_theme (startbootstrap/startbootstrap-agency-jekyll) 404'd.
+# This one is actively maintained and supports GitHub Pages.
+remote_theme: raviriley/agency-jekyll-theme
 
-# ---- Plugins ----
+# -----------------------------
+# Plugins (GitHub Pages compatible)
+# -----------------------------
 plugins:
-  - jekyll-remote-theme   # remote_theme를 쓰려면 반드시 필요
-  - jekyll-sitemap        # 선택
-  - jekyll-feed           # 선택
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# ---- Build options ----
+# -----------------------------
+# Markdown & syntax
+# -----------------------------
 markdown: kramdown
 highlighter: rouge
 
-# ---- Navigation (선택) ----
-# navigation 데이터는 _data/navigation.yml에서 관리하되,
-# 여기선 기본 섹션 노출만 보장하고 싶다면 아래처럼 섹션 id만 맞춰도 됩니다.
-collections:
-  posts:
-    output: true
+# -----------------------------
+# Permalinks
+# -----------------------------
+permalink: pretty
+
+# -----------------------------
+# Defaults (optional, safe)
+# -----------------------------
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# -----------------------------
+# Excludes (optional)
+# -----------------------------
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# -----------------------------
+# Notes
+# -----------------------------
+# This theme reads section content from _data/sitetext.yml by default.
+# We customized about.html to prefer _data/sitetext_overrides.yml when present.
+# Keep both files if desired; overrides take precedence for the About section.
