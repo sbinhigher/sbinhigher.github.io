@@ -1,11 +1,26 @@
-title: sbinhigher
-url: https://sbinhigher.github.io
-baseurl: ""               # 사용자 사이트면 빈 문자열
-locale: "en"
+# ---- Site basics ----
+title: "sbinhigher"
+description: "Seongbin Ko · Portfolio"
+url: "https://sbinhigher.github.io"
+baseurl: ""        # 사용자 페이지면 빈 문자열
+locale: "ko"       # 다국어 사용 시 'ko' 또는 'en'
 
-# Agency 원격 테마 (깃허브 페이지 호환)
-remote_theme: y7kim/agency-jekyll-theme
+# ---- Theme (GitHub Pages에서 자동 호환) ----
+remote_theme: StartBootstrap/startbootstrap-agency-jekyll
 
-# 선택: 소셜/연락처
-email: sbinhigher@email.com
-github_username: sbinhigher
+# ---- Plugins ----
+plugins:
+  - jekyll-remote-theme   # remote_theme를 쓰려면 반드시 필요
+  - jekyll-sitemap        # 선택
+  - jekyll-feed           # 선택
+
+# ---- Build options ----
+markdown: kramdown
+highlighter: rouge
+
+# ---- Navigation (선택) ----
+# navigation 데이터는 _data/navigation.yml에서 관리하되,
+# 여기선 기본 섹션 노출만 보장하고 싶다면 아래처럼 섹션 id만 맞춰도 됩니다.
+collections:
+  posts:
+    output: true
