@@ -22,7 +22,7 @@ ko:
       - "SQLD (예시)"
       - "ADsP (예시)"
       - "Tableau Desktop Specialist (예시)"
-      
+
   portfolio:
     enabled: true
     id: portfolio
@@ -114,60 +114,7 @@ ko:
         desc: "정책 전/후 효과 측정, 코호트/퍼널, 재구매율 지표 관리"
         icon: "fas fa-balance-scale"
 
-  portfolio:
-    enabled: true
-    id: portfolio
-    title: "Portfolio"
-    text: "대표 프로젝트를 카드로 정리했습니다."
-    section:
-      - title: "풍력발전기 결함 탐지"
-        subtitle: "YOLOv7 · 품질관리"
-        modal: "modal-1"
-        category: "Computer Vision"
-        image: "assets/img/portfolio/p1.jpg"
-        alt: "Wind-turbine defect detection"
-        description: "정확도 90%, 검사 생산성 93% 향상. 라벨링 기준 수립/전수검."
-        url: ""
-      - title: "이커머스 코호트/퍼널 분석"
-        subtitle: "SQL · 재구매율"
-        modal: "modal-2"
-        category: "E‑commerce"
-        image: "assets/img/portfolio/p2.jpg"
-        alt: "E-commerce cohort/funnel"
-        description: "코호트/퍼널 분석과 KPI 관리로 전환율 개선 인사이트."
-        url: ""
-      - title: "교통혼잡 이상치 탐지"
-        subtitle: "Time-series"
-        modal: "modal-3"
-        category: "Time Series"
-        image: "assets/img/portfolio/p3.jpg"
-        alt: "Traffic anomaly detection"
-        description: "시계열 이상치 탐지로 정책 의사결정 보조."
-        url: ""
-      - title: "정책 효과 대시보드"
-        subtitle: "SQL→Excel"
-        modal: "modal-4"
-        category: "Dashboard"
-        image: "assets/img/portfolio/p4.jpg"
-        alt: "Policy KPI dashboard"
-        description: "정책 전/후 KPI 비교, 지역별 성과 트래킹."
-        url: ""
-      - title: "라벨링 품질관리 가이드"
-        subtitle: "QA · 기준화"
-        modal: "modal-5"
-        category: "Data QA"
-        image: "assets/img/portfolio/p5.jpg"
-        alt: "Labeling QA guideline"
-        description: "결함 유형·예시 이미지로 기준 수립, 일관성 확보."
-        url: ""
-      - title: "헬스케어 데이터 리서치"
-        subtitle: "Dashboard PoC"
-        modal: "modal-6"
-        category: "Healthcare"
-        image: "assets/img/portfolio/p6.jpg"
-        alt: "Healthcare analytics"
-        description: "활동/커뮤니티 지표 분석과 개인화 인사이트."
-        url: ""
+
 
   team:        { enabled: false }
   timeline:    { enabled: false }
