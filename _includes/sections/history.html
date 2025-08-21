@@ -1,0 +1,55 @@
+{% comment %}
+History section inspired by parkeunsang.github.io 'History' block.
+Data source: site.data.sitetext_overrides[site.locale].history (falls back to site.data.sitetext[site.locale].history)
+Structure: categories (education, career, experience) each as an array of items.
+{% endcomment %}
+<section id="{{ site.data.sitetext_overrides[site.locale].history.id | default: site.data.sitetext[site.locale].history.id | default: 'history' }}" class="bg-white">
+  <div class="container">
+    {% assign hx = site.data.sitetext_overrides[site.locale].history | default: site.data.sitetext[site.locale].history | default: site.data.sitetext.en.history %}
+    {% if hx and hx.enabled != false %}
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">{{ hx.title | default: 'History' }}</h2>
+          {% if hx.text %}<h3 class="section-subheading text-muted">{{ hx.text }}</h3>{% endif %}
+        </div>
+      </div>
+
+      {% assign blocks = "education|career|experience" | split: "|" %}
+      {% for block in blocks %}
+        {% assign list = hx[block] %}
+        {% if list and list.size > 0 %}
+        <div class="row mt-4">
+          <div class="col-lg-12">
+            <h3 class="mb-3">
+              {% if block == "education" %}Education{% elsif block == "career" %}Career{% else %}Experience{% endif %}
+            </h3>
+          </div>
+          <div class="col-lg-12">
+            <div class="timeline">
+              {% for item in list %}
+                <div class="timeline-item mb-4">
+                  <h4 class="mb-1">{{ item.period }}</h4>
+                  <h5 class="mb-1">{{ item.title }}</h5>
+                  {% if item.subtitle %}<div class="text-muted mb-2">{{ item.subtitle }}</div>{% endif %}
+                  {% if item.desc and item.desc.size > 0 %}
+                    <ul class="mb-2">
+                      {% for d in item.desc %}<li>{{ d }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                  {% if item.links and item.links.size > 0 %}
+                    <p class="mb-0">
+                      {% for l in item.links %}
+                        <a href="{{ l.href }}" target="_blank" rel="noopener">{{ l.text }}</a>{% unless forloop.last %} · {% endunless %}
+                      {% endfor %}
+                    </p>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>

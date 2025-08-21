@@ -1,0 +1,57 @@
+ko:
+  history:
+    enabled: true
+    id: history
+    title: "History"
+    text: ""
+    education:
+      - period: "YYYY.MM - YYYY.MM"
+        title: "대학교명"
+        subtitle: "전공 / 복수전공"
+        desc:
+          - "주요 수업·활동 요약"
+        links: []
+    career:
+      - period: "YYYY.MM - YYYY.MM"
+        title: "회사명"
+        subtitle: "직무 / 고용형태"
+        desc:
+          - "핵심 역할과 성과 1"
+          - "핵심 역할과 성과 2"
+        links: []
+    experience:
+      - period: "YYYY.MM - YYYY.MM"
+        title: "활동/프로젝트명"
+        subtitle: ""
+        desc:
+          - "설명/성과"
+        links: []
+
+en:
+  history:
+    enabled: true
+    id: history
+    title: "History"
+    text: ""
+    education:
+      - period: "YYYY.MM - YYYY.MM"
+        title: "University"
+        subtitle: "Major / Double major"
+        desc:
+          - "Highlights"
+        links: []
+    career:
+      - period: "YYYY.MM - YYYY.MM"
+        title: "Company"
+        subtitle: "Role / Type"
+        desc:
+          - "Impact 1"
+          - "Impact 2"
+        links: []
+    experience:
+      - period: "YYYY.MM - YYYY.MM"
+        title: "Activity/Project"
+        subtitle: ""
+        desc:
+          - "Description"
+        links: []
