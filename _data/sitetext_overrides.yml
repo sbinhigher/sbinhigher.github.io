@@ -16,9 +16,15 @@ ko:
       - "라벨링 품질관리 가이드 수립·전수검수 운영"
       - "GitHub 포트폴리오/기술 블로그 정리"
     certificates:
-      - "SQLD (예시: 보유/예정으로 교체)"
+      - "SQLD (예시)"
       - "ADsP (예시)"
       - "Tableau Desktop Specialist (예시)"
+  services:
+    enabled: true
+    id: services
+  portfolio:
+    enabled: true
+    id: portfolio
 
 en:
   about:
@@ -41,3 +47,9 @@ en:
       - "SQLD (placeholder)"
       - "ADsP (placeholder)"
       - "Tableau Desktop Specialist (placeholder)"
+  services:
+    enabled: true
+    id: services
+  portfolio:
+    enabled: true
+    id: portfolio
